@@ -1,0 +1,403 @@
+<head><title></title><meta charset="utf-8"><link rel="stylesheet" href="./styles.css"></head><body class="light-theme blue_sky" style="padding: 20px;"><div class="shine-editor"><div><b>Primeiros passos com o
+KNIME Analytics Platform </b></div>
+
+<div>&nbsp;</div>
+
+<div>O <b>KNIME Analytics Platform</b> é uma ferramenta visuale intuitiva para
+análise de dados, automação de processos e ciência de dados. Ele permite que
+você crie fluxos de trabalho (workflows) <b><span style="mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-fareast-theme-font:major-fareast">sem precisar programar</span></b>,
+o que o torna ideal para quem quer otimizar tarefas repetitivas de análise e
+transformação de dados de maneira simples e eficiente.</div>
+
+<div>Caso você ainda não tenha o Knime Analytics Platform instalado na sua
+máquina,<b> acesse </b><a href="https://arrudaconsulting.com.br/como-instalar-o-knime-analytics-platform/">https://arrudaconsulting.com.br/como-instalar-o-knime-analytics-platform/</a>
+<span style="mso-spacerun:yes">&nbsp;</span>para aprender a instalar o Knime no seu
+computador.</div>
+
+<h2>Aprenda os Termos Básicos do KNIME</h2>
+
+<div>Antes de começar a usar o KNIME, é importante conhecer alguns termos chave
+que serão usados ao longo deste guia. Aqui estão os principais:</div>
+
+<ul type="disc"><li><b>Workflow
+     (Fluxo de Trabalho):</b> É o “mapa” do seu processo, um conjunto de passos
+     conectados que formam seu projeto. Pense nele como o seu processo de
+     análise de dados completo.</li><li><b>Node
+     (Nó):</b> Cada node no KNIME representa uma ação ou etapa específica do
+     seu fluxo de trabalho. É nele que você configura as transformações ou
+     análises dos dados.</li><li><b>Connector
+     (Conector):</b> São as linhas que conectam os nodes. Elas indicam a sequência
+     e o fluxo de dados entre as etapas do seu workflow.</li><li><b>KNIME
+     Hub</b> → Um Repositório online com exemplos de workflows e extensões. É
+     como se fosse uma pasta (ou drive) onde pessoas do mundo todo publicam
+     seus trabalhos para divulgação ou para ajudar outras pessoas que queiram
+     resolver problemas parecidos.</li></ul><div><b style="mso-bidi-font-weight:
+normal">Como funciona
+a Interface do KNIME Analytics Platform</b></div>
+
+<div>Agora que você já sabe o mínimo sobre as nomenclaturas, podemos partir para
+a área de trabalho do KNIME. Ela é composta por 2 layouts, o clássico (presente
+nas versões antigas) e o moderno, que vamos utilizar nesse artigo.</div>
+
+<div>PS: Você pode ocasionalmente intercalar entre os dois layouts conforme sua
+preferência, mas a nossa explicação focará no Layout “moderno”.</div>
+
+<div>Ao abrir o KNIME Analytics Platform, você verá a interface dividida em
+várias seções. O layout é moderno e fácil de usar, com as seguintes partes
+principais:</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;<img width="100%" src="Files/pagina_inicial_knime-2048x1031.png"></div><div><br></div>
+
+<div style="text-align: center;">Figura <span style="mso-no-proof:yes">1</span> - Página inicial do Knime Analytics Platform</div>
+
+<div><b><br></b></div><ul><li><b>Navegador de Ambiente:</b> Aqui você pode acessar os
+     seus projetos locais e explorar os workflows públicos no KNIME Hub. Para
+     acessar os workflows do Hub, é necessário criar uma conta e fazer login.</li><li><b>Painel de Exemplos:</b> Mostra workflows prontos
+     para que você possa começar rapidamente ou buscar inspiração.</li><li><b>Criar Workflow:</b> A partir desta opção, você
+     pode criar um novo workflow para começar seu projeto.</li><li><b>Workflows Recentes:</b> Aqui você encontra os
+     projetos que você acessou ou editou recentemente.</li></ul><div>Ao criar
+ou acessar um Workflow, a janela de edição é habilitada na interface, trazendo
+as opções abaixo:</div><div><br></div><div><img width="100%" src="Files/editor_workflow-2048x1077.png"><br></div>
+
+
+
+<div style="text-align: center;">Figura <span style="mso-no-proof:yes">2</span> - Tela do editor de Workflow do KNIME</div><div style="text-align: center;"><br></div><ul><li><b>Navegador
+     de Abas:</b> Permite alternar entre diferentes workflows que você tenha
+     aberto (clique em “+” para adicionar um novo Workflow rapidamente).</li><li><b>Guias
+     laterais:</b></li></ul><div><span style="mso-list:Ignore">o&nbsp;&nbsp; </span><b>Info</b>:
+Acesse a descrição do workflow ou componente selecionado.</div>
+
+<div><span style="mso-list:Ignore">o&nbsp;&nbsp; </span><b>Nodes</b>:
+Centraliza todos os nodes disponíveis no KNIME Analytics Platform, com uma
+busca inteligente, fica fácil você encontrar o que precisa e simplesmente
+arrastar para a área de edição.</div>
+
+<div><span style="mso-list:Ignore">o&nbsp;&nbsp; </span><b>Explorer</b>:
+Navegue pelas pastas que estão dentro do seu diretório local do KNIME ou então
+acesse os diretórios do Hub da comunidade.</div>
+
+<div><span style="mso-list:Ignore">o&nbsp;&nbsp; </span><b>Monitor</b>:Verifique,
+monitore e acesse alertas e possíveis erros que podem impedir seu workflow de
+rodar corretamente.</div>
+
+<ul type="disc"><li><b>Help,
+     Preferences e Menu:</b> Acesse materiais de apoio, faça configurações
+     avançadas e instale novas extensões.</li><li><b>Workflow
+     Editor: </b>Área de trabalho para desenvolvimento do Workflow ativo.
+     Adicione novos nodes arrastando e conectando eles.</li><li><b>Node
+     Monitor: </b>Mostra os resultados do node selecionado e também o valor das
+     variáveis ativas.</li></ul><h2>Como criar e editar Workflows no KNIME Analytics Platform</h2>
+
+<div>Para trabalhar com um workflow podemos criar um novo, acessar um antigo,
+abrir um exemplo ou até mesmo explorar os workflows da comunidade (em breve
+faremos um artigo falando só disso). Isso pode ser feito de 3 formas:</div>
+
+<ol type="1"><li>Clicando
+     em “New Workflow” na tela inicial do KNIME;</li><li>Acessando
+     os Workflows recentes também na página inicial;</li><li>Clicando
+     em + no navegador de abas presente na tela de Edição de Workflow (quando
+     houver um workflow aberto);</li></ol><div>Dentro desse novo Workflow, você pode começar seu desenvolvimento clicando e
+arrastando nos nodes que se encontram no painel lateral na guia de nodes.</div>
+
+<h2>Como são estruturados os Nodes</h2>
+
+<div>Os nodes são o coração do desenvolvimento no KNIME, é através dele que você
+pode ler/gravar arquivos de diversos formatos, operar transformações, operações
+matemáticas, sequências lógicas e de automação em diversos níveis, além de
+criação de gráficos e uma infinidade de outras funções, incluindo scripts de
+programação, algoritmos estatísticos e machine learning.</div>
+
+<div>&nbsp;</div>
+
+<h3>Como é estrutura de um node:</h3>
+
+<div>&nbsp;</div>
+
+
+
+<div style="text-align: center;"><img width="100%" src="Files/descricao_node-1-768x489.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">3</span> - Diagrama de um node no KNIME</div>
+
+<div>&nbsp;</div>
+
+<ul type="disc"><li><b>Tipo do Node: </b>O título principal que você
+     vai encontrar logo acima do node fala sobre o tipo de node que ele é, isso
+     facilita tanto na hora de você buscar nodes novos quanto na hora de você
+     fazer a manutenção dos nodes já inseridos no seu Workflow, facilitando a
+     documentação e identificação dos processos.</li><li><b>(Input port) Porta de
+     Entrada:</b> É
+     onde você conecta a tabela de dados que serão processados.</li><li><b>(Output Port) Porta de
+     Saída:</b>
+     Nela está presente o resultado do processamento do node atual. Conecte ela
+     a uma porta de entrada de outro node para dar continuidade no processo.
+     Também é possível através da seção “node monitor” verificar o resultado
+     dos dados processados.</li><li><b>(Node Annotation) Comentário
+     do node:</b>
+     Essa descrição curta pode ser editada manualmente para facilitar a
+     documentação ou guardar informações curtas sobre o que está sendo feito no
+     node.</li><li><b>(Node Status) Status do
+     node:</b>
+     Este farol pode ter 4 resultados específicos, são eles:</li></ul><div>&nbsp;</div><div><img width="100%" src="Files/node_status-768x347.png"><br></div>
+
+
+
+<div style="text-align: center;">Figura <span style="mso-no-proof:yes">4</span> - Farol de Status de um Node no KNIME</div>
+
+<div>&nbsp;</div>
+
+<ol type="1"><li><b>Not configured/Não
+     configurado </b>– O
+     node ainda não foi configurado ou não possui dado conectado a ele;</li><li><b>Configured/Configurado</b> – O node está devidamente
+     configurado e aguardando a execução;</li><li><b>Executed/Executado </b>– O node foi processado com
+     sucesso e pode ter seus resultados visualizados na parte inferior da tela
+     (o node monitor);</li><li><b>Error/Erro</b> – O node foi executado mas
+     algo deu errado.</li></ol><div>&nbsp;</div>
+
+<div>Há 3
+situações em que o Status de um node pode mudar, ao configurar, executar ou
+resetar um node. Todas essas ações podem ser encontradas:</div>
+
+<ul type="disc"><li>Quando você passa o mouse
+     sobre um nó, uma barra de ações aparece, oferecendo as seguintes opções
+     “Configure”, “Execute”, “Cancel” (para nodes em execução) e “Reset”.</li></ul><div>&nbsp;</div>
+
+
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><img width="50%" src="Files/botoes_de_acao_node-275x300.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">5</span> - Botões de ação de um node no KNIME</div>
+
+<ul type="disc"><li>Ao clicar com o botão
+     direito em um node, você pode selecionar as opções no “menu de contexto”:</li></ul><div>&nbsp;</div><div style="text-align: center;"><img width="50%" src="Files/menu_de_contexto_knime.png"><br></div>
+
+
+
+<div style="text-align: center;">Figura <span style="mso-no-proof:yes">6</span> - Menu de contexto de um node no KNIME</div>
+
+<div>&nbsp;</div>
+
+<ul type="disc"><li>Com os
+     atalhos do teclado: </li><ul type="circle"><li>Tecla
+      “delete”: excluir o node</li><li>Tecla
+      F6: Configurar o node (também disponível com um duplo clique do mouse)</li><li>Tecla
+      F8: Resetar o node</li><li>Tecla
+      F9: Cancelar e interromper (quando em processamento) a execução de um
+      node</li><li>Tecla
+      F7: Executar o node</li><li>Tecla
+      F2: Editar o comentário do node</li></ul></ul><h3>Como configurar um node</h3>
+
+<div>Para configurar um node, basta ajustar as configurações na sua caixa de
+diálogo de configuração.</div>
+
+<div>Você pode abrir a caixa de diálogo de configuração de um node de várias
+formas:</div>
+
+<ul type="disc"><li>Dando
+     um duplo clique sobre o node</li><li>Clicando
+     no botão <b>Configurar</b> na barra de ações do node</li><li>Clicando
+     com o botão direito no node e selecionando <b>Configurar</b> no menu de
+     contexto</li><li>Selecionando
+     o node e pressionando <b>F6</b></li></ul><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img width="100%" src="Files/configurando_um_node-1024x795.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">7</span> - Configurando um node – KNIME</div>
+
+<div><span style="mso-spacerun:yes">&nbsp;</span></div>
+
+<div><b>Como executar um node<br>
+</b>Alguns nodes já chegam com o status “configurado” quando são criados. Esses
+nodes podem ser executados sem a necessidade de ajustes nas configurações
+padrão.</div>
+
+<div>Para executar o node, você tem as seguintes opções:</div>
+
+<ul type="disc"><li>Clicar
+     no botão <b>Executar</b> na barra de ações do node</li><li>Clicar
+     com o botão direito no node e selecionar <b>Executar</b></li><li>Selecionar
+     o node e pressionar <b>F7</b></li></ul><div style="text-align: center;"><br></div><div style="text-align: center;"><img width="50%" src="Files/node_executado.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">8</span> - Node com status executado – KNIME</div>
+
+<div>Se a execução for bem-sucedida, o status do node passa para “executado”, o
+que é representado pelo farol verde. Caso a execução falhe o farol vai mostrar
+o status de erro, e as configurações e entradas do node precisarão ser
+ajustadas conforme necessário.</div>
+
+<div><b>Cancelar a execução de um node<br>
+</b>Para cancelar a execução de um node, clique no botão <b>Cancelar</b> na
+barra de ações do node, clique com o botão direito no node e selecione <b>Cancelar</b>,
+ou selecione o node e pressione <b>F9</b>.</div>
+
+<div><b>Como Resetar um node<br>
+</b>Para resetar um node, clique no botão <b>Resetar</b> na barra de ações do
+node, clique com o botão direito no node e selecione <b>Resetar</b>, ou
+selecione o node e pressione <b>F8</b>.</div>
+
+<div>Resetar um node também resetará todos os nodes na sequência do workflow. O
+status do node(s) voltará de “executado” para “configurado”, e as saídas do
+node serão zeradas.</div>
+
+<div><b>Como funcionam as portas dos nodes no KNIME Analytics Platform<br>
+</b>Cada node pode ter várias portas de entrada e saída. Quando conectamos
+vários nodes em sequência, utilizando as portas de entrada à esquerda e as
+portas de saída à direita, formamos o workflow. As portas de entrada dos nodes
+à esquerda consomem os dados das saídas dos nodes à direita, ou seja, as portas
+de saída fornecem dados aos nodes que vêm em seguida.</div>
+
+
+
+
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><img width="100%" src="Files/workflow_visaogeral.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">9</span> - Visão Geral de um Workflow – KNIME</div>
+
+<div>Além de tabelas de dados, as portas de entrada e saída podem fornecer outros
+tipos de entradas e saídas. Para cada tipo, o par de portas de entrada e saída
+será diferente.</div>
+
+
+
+
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><img width="50%" src="Files/tipos_de_porta-768x632.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">10</span> - Tipos de porta – KNIME</div>
+
+<div>Uma porta de saída só pode ser conectada a uma porta de entrada do mesmo
+tipo — dados para dados, modelo para modelo, e assim por diante.</div>
+
+<div>Algumas portas de entrada podem ser vazias, como a porta de entrada de dados
+do <b>Árvore de Decisão</b>. Isso significa que a entrada é opcional, e o node
+pode ser executado mesmo sem ela. Já as entradas obrigatórias, indicadas por
+portas de entrada preenchidas, precisam ser fornecidas para que o node possa ser
+executado.</div>
+
+<div><b>Como adicionar nodes ao Workflow<br>
+</b>Existem 3 formas de adicionar nodes ao workflow:</div>
+
+<ul type="disc"><li>Arraste
+     e solte um node do repositório de nodes</li><li>Dê um
+     duplo clique sobre um node dentro do repositório de nodes</li><li>Use o
+     painel de adição rápida de nodes. Clique duas vezes no canvas ou arraste e
+     solte uma porta de node (entrada ou saída) no canvas para abrir o painel
+     de adição rápida de nodes. Esse painel contém até 12 nodes recomendados,
+     ou você pode buscar no painel pelo node desejado e, em seguida, clicar sobre
+     ele para adicioná-lo ao canvas.</li></ul><div style="text-align: center;">Figura <span style="mso-no-proof:yes">11</span> - Clique e arraste para
+adicionar um novo node na sequencia do Workflow</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div><b>Como usar
+o painel de adição rápida de nodes</b></div>
+
+<div>Para
+utilizar a adição rápida de nodes, você precisa permitir que o KNIME colete os <b>dados
+anônimos de uso</b>. Isso pode ser feito ao iniciar o KNIME Analytics Platform
+ou após mudar de workspace, selecionando <b>Sim</b> na caixa de diálogo “Ajude
+a melhorar o KNIME”.</div>
+
+<div><b>Como
+substituir nodes em um workflow<br>
+</b>Os nodes
+podem ser movidos no editor de workflow arrastando-os. Para copiar nodes entre
+workflows, selecione os nodes desejados, clique com o botão direito na seleção
+e escolha <b>Copiar</b> no menu. No workflow de destino, clique com o botão
+direito no editor de workflow e selecione <b>Colar</b> no menu.</div>
+
+<div>Para
+selecionar um node no editor de workflow, basta clicar sobre ele uma vez, e ele
+será cercado por uma borda. Para selecionar múltiplos nodes, desenhe um
+retângulo sobre os nodes com o mouse ou segure a tecla Ctrl enquanto clica nos
+nodes desejados.</div>
+
+<div><b>Comentários
+e anotações<br>
+</b>Dentro do
+seu Workflow você tem duas opções para documentação:</div>
+
+<ul type="disc"><li><b>Comentário do node</b> — Adicione um comentário a
+     um node individual dando um duplo clique no campo de texto abaixo do node
+     (Add a comment) e editando o texto.</li></ul><div style="text-align: center;"><br></div><div style="text-align: center;"><img width="50%" src="Files/arrastar_saida_node.gif"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">12</span> - Botões de ação de um node
+no KNIME</div>
+
+<div>&nbsp;</div>
+
+<ul type="disc"><li><b>Anotação do workflow</b> (Workflow Annotation)—
+     Adicione um comentário geral ao workflow clicando com o botão direito no
+     editor de workflow e selecionando <b>“New workflow annotation”</b>. Um
+     campo de texto aparecerá no editor de workflow.</li></ul><div style="text-align: center;">&nbsp;</div>
+
+
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><img width="50%" src="Files/botoes_de_acao_node.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">13</span> - Adicione uma anotação ao
+Workflow do KNIME</div>
+
+<div>&nbsp;</div>
+
+<div>Para
+adicionar uma nova anotação, você também pode mudar para o modo de anotação
+clicando no ícone <b>16</b> no canto superior direito da interface do usuário e
+selecionando <b>Modo de Anotação</b>, ou pressionando <b>T</b> para entrar no
+modo de anotação.</div><div><br></div>
+
+
+
+<div style="text-align: center;"><img width="100%" src="Files/menu_workflow.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">14</span> - Menu superior KNIME</div>
+
+<div><b>Como
+formatar o texto das anotações</b></div>
+
+<div><b><br>
+</b>Clique
+duas vezes na anotação do workflow para adicionar texto e formatá-lo. Você pode
+mudar a cor do contorno da anotação e usar a barra de formatação ou aplicar a
+seguinte sintaxe:</div>
+
+<ul type="disc"><li>Para criar um título,
+     adicione sinais de número (#) seguidos de um espaço, antes de uma palavra
+     ou frase. O número de sinais de número corresponde ao nível de título
+     (&lt;h1&gt; a &lt;h6&gt;).</li><li>Para criar uma lista com
+     marcadores, adicione um asterisco (*) seguido de um espaço.</li><li>Para criar uma lista
+     numerada, adicione um número seguido de um ponto (1.), seguido de um espaço.</li><li>Para deixar o texto em
+     negrito, itálico ou sublinhado, selecione o texto e pressione <b>CTRL+b</b>,
+     <b>CTRL+i</b>, <b>CTRL+u</b>.</li></ul><div style="text-align: center;"><br></div><div style="text-align: center;"><img width="100%" src="Files/formatar_anotacao.png"><br></div><div style="text-align: center;">Figura <span style="mso-no-proof:yes">15</span> - Formatando uma anotação de
+workflow – KNIME</div>
+
+<h3>Dicas e Hacks gerais</h3>
+
+<ul type="disc"><li>Adicione <b>nós (nodes)</b> arrastando da <b>Node
+     Repository</b> para o canvas.</li><li><b>Conecte
+     nodes</b> clicando e arrastando da porta de saída de um node
+     até a porta de entrada de outro.</li><li>Alguns nodes possuem <b>portas dinâmicas</b> (+) nas
+     laterais que você pode adicionar clicando e escolhendo o tipo.</li><li>Para <b>inserir
+     um node entre dois</b> já conectados, basta arrastá-lo para o
+     meio da conexão.</li><li><b>Pesquise nodes</b> pelo campo
+     de busca no topo da Node Repository<b>.</b></li><li><b>Clique ou passe o mouse</b>
+     sobre um node para acessar a descrição, funções e portas disponíveis.</li><li>Use o painel lateral para ver detalhes da <b>configuração do node</b>.</li><li>Adicione ou edite a descrição do workflow
+     clicando no <b>ícone
+     de caneta</b> no painel lateral.</li><li>Utilize o <b>Assistente AI</b> para te ajudar a criar workflows
+     ou tirar dúvidas (Acesso via <b>KNIME Hub</b> – é necessário
+     login). Ela pode ser usada em dois modos: </li><ul type="circle"><li><b>Q&amp;A Mode:</b> Faça
+      perguntas sobre KNIME e receba respostas detalhadas.</li><li><b>Build Mode:</b> Expande seu
+      workflow automaticamente com base em um prompt</li></ul><li><b>Resetar um node</b> apaga os
+     dados processados, mas mantém a configuração.</li><li>Reduza o tamanho dos seus arquivos: antes de
+     salvar, <b>resete
+     o workflow</b> se o dado puder ser acessado novamente.</li></ul><div>Esses foram os primeiros passos para entender
+como funciona o<b><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:major-fareast"> KNIME Analytics Platform</span></b>,
+a proposta da ferramenta é ser acessível para quem busca otimizar a análise e o
+tratamento de dados sem a necessidade de saber programar. Sua interface
+intuitiva e visual facilita o entendimento das etapas de um projeto, desde a
+extração até a geração de insights. Ao dominar os conceitos de workflows, nodes
+e suas funcionalidades, você vai conseguir explorar melhor a plataforma e criar
+soluções para diversos cenários.</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div><a href="https://www.youtube.com/embed/d3WG9f0_zFE?feature=oembed" data-upnote-iframe="<iframe title=&quot;KNIME na Prática: Construa um Modelo de Churn Sem Programação&quot; allowfullscreen=&quot;true&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; frameborder=&quot;0&quot; src=&quot;https://www.youtube.com/embed/d3WG9f0_zFE?feature=oembed&quot; data-upnote-iframe-ratio=&quot;56.5%&quot;></iframe>" data-upnote-iframe-ratio="56.5%" title="KNIME na Prática: Construa um Modelo de Churn Sem Programação">KNIME na Prática: Construa um Modelo de Churn Sem Programação</a><div><br></div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div></div></body>
